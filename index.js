@@ -11,13 +11,13 @@ let tweets =[];
 app.post("/sign-up", (req, res) => {
     const usuario = req.body;
     usuarios.push(usuario);
-    res.send("OK");
+    res.status(200).send("OK");
 });
 
 app.post("/tweets", (req,res) => {
     const tweet = req.body;
     tweets.unshift(tweet);
-    res.send("OK");
+    res.status(200).send("OK");
 })
 
 app.get("/tweets", (req, res) => {
